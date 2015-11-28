@@ -1,0 +1,28 @@
+apply plugin: 'application'
+
+group = 'com.github.shamoh.mega-examples'
+version = '-SNAPSHOT'
+
+mainClassName = 'cz.kramolis.mega.internal.Main'
+
+archivesBaseName = "${rootProject.name}-${name.replaceAll("\\p{Upper}") { "-${it.toLowerCase()}" }}"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+ext {
+    megaVersion = '-SNAPSHOT'
+}
+
+dependencies {
+    compile "com.github.shamoh.mega:runtime:${megaVersion}"
+    compile "com.github.shamoh.mega:grizzly:${megaVersion}"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.9'
+}

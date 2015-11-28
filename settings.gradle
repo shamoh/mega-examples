@@ -1,0 +1,4 @@
+rootProject.name = 'mega-examples'
+
+include \
+    "http-static-content"
