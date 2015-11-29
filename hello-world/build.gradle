@@ -20,7 +20,6 @@ ext {
 
 dependencies {
     compile "com.github.shamoh.mega:mega-runtime:${megaVersion}"
-    compile "com.github.shamoh.mega:mega-grizzly:${megaVersion}"
 }
 
 task wrapper(type: Wrapper) {

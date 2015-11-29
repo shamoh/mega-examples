@@ -3,17 +3,17 @@ package cz.kramolis.mega.examples.httpstaticcontent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
-import javax.enterprise.inject.Specializes;
 import javax.inject.Inject;
 
-import cz.kramolis.mega.Context;
 import cz.kramolis.mega.grizzly.GrizzlyHttpServerUtils;
 import cz.kramolis.mega.grizzly.HttpServerHolder;
+import cz.kramolis.mega.runtime.Context;
 import org.apache.deltaspike.core.api.projectstage.ProjectStage;
 
-@Specializes
-public class HttpStaticContentApp extends Context {
+@ApplicationScoped
+public class HttpStaticContentApp implements Context {
 
     @Inject
     private Logger logger;

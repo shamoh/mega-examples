@@ -1,4 +1,5 @@
 rootProject.name = 'mega-examples'
 
 include \
+    "hello-world",
     "http-static-content"
