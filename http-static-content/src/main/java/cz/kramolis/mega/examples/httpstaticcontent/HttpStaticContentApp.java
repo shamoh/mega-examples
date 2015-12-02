@@ -1,5 +1,6 @@
 package cz.kramolis.mega.examples.httpstaticcontent;
 
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,7 +26,7 @@ public class HttpStaticContentApp implements Context {
     private GrizzlyHttpServerUtils grizzlyHttpServerUtils;
 
     private void onHttpServerAvailable(@Observes HttpServerHolder httpServerHolder) {
-        logger.info("Configure Grizzly HTTP server.");
+        logger.info("Configure Grizzly HTTP server. " + (new Date()));
         if (logger.isLoggable(Level.FINE)) {
             logger.fine("Current HTTP server instance: " + httpServerHolder.getHttpServer());
         }
