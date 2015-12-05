@@ -19,11 +19,3 @@ Run it
 gradle installDist
 build/install/hello-world/bin/hello-world
 ```
-
-
-Try it
-------
-
-```shell
-curl -I -X GET http://localhost:8090/shamoh.jpg
-```

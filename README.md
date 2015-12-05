@@ -15,3 +15,12 @@ HTTP Static Content Example
 
 Example [HTTP Static Content](http-static-content) demonstrates
 how to integrate with Grizzly HTTP Server to provide static content.
+
+
+Build it
+--------
+
+```shell
+gradle -t installDist
+```
+

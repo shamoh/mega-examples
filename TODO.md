@@ -2,6 +2,7 @@ TODO
 ====
 
 - Enhance classpath or modify dependencies of `run` goal to run the application simpler.
+- prefix each artifact
 
 
 Examples
