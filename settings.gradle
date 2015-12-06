@@ -2,4 +2,5 @@ rootProject.name = 'mega-examples'
 
 include \
     "hello-world",
-    "http-static-content"
+    "http-static-content",
+    "jaxrs-hello-world"
