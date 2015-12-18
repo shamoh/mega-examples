@@ -15,7 +15,20 @@ Run it
 ------
 
 ```shell
+gradle -t run
+```
+
+
+Distribution
+------------
+
+```shell
 gradle installDist
+```
+
+Run it:
+
+```shell
 build/install/http-static-content/bin/http-static-content
 ```
 

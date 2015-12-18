@@ -1,3 +1,7 @@
 task wrapper(type: Wrapper) {
     gradleVersion = '2.9'
 }
+
+gradle.buildFinished {
+    println "\t\t\t***** ${new java.util.Date()} *****"
+}

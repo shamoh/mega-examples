@@ -10,9 +10,9 @@ import cz.kramolis.mega.runtime.Environment;
 public class HelloWorldApp implements Context {
 
     private void onEnvironmentAvailable(@Observes Environment environment) {
+        //TODO access command line arguments
         System.out.println("Hello World!");
 
-        //TODO accept command line arguments
         environment.shutdown();
     }
 

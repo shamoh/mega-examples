@@ -16,6 +16,19 @@ Run it
 ------
 
 ```shell
+gradle -t run
+```
+
+
+Distribution
+------------
+
+```shell
 gradle installDist
+```
+
+Run it:
+
+```shell
 build/install/hello-world/bin/hello-world
 ```

@@ -25,3 +25,11 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.9'
 }
+
+
+task copyResourcesToClasses(type: Copy) {
+    from 'build/resources/main'
+    into 'build/classes/main'
+}
+
+tasks.run.dependsOn tasks.copyResourcesToClasses

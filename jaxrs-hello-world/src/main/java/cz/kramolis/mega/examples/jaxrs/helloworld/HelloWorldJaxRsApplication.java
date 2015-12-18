@@ -5,10 +5,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-//TODO support @ApplicationPath
 @ApplicationScoped
+@ApplicationPath("1.0")
 public class HelloWorldJaxRsApplication extends Application {
 
     private final Set<Class<?>> classes;
