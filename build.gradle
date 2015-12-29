@@ -3,5 +3,5 @@ task wrapper(type: Wrapper) {
 }
 
 gradle.buildFinished {
-    println "\t\t\t***** ${new java.util.Date()} *****"
+    println "Build finished: ${new java.util.Date()}"
 }
