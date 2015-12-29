@@ -19,6 +19,20 @@ gradle -t run
 ```
 
 
+Develop it
+----------
+
+```shell
+gradle -t start
+```
+
+Don't forget to stop running application at the end of the day:
+
+```shell
+gradle stop
+```
+
+
 Distribution
 ------------
 
@@ -37,6 +51,7 @@ Try it
 ------
 
 ```shell
-curl -I -X GET http://localhost:9080/helloworld
+curl -vvv http://localhost:9080/1.0/helloworld
+curl -vvv http://localhost:9080/1.0/helloworld/Libor
 ```
 

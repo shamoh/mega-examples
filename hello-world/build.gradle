@@ -1,4 +1,4 @@
-apply plugin: 'application'
+apply plugin: 'cz.kramolis.mega'
 
 group = 'com.github.shamoh.mega-examples'
 version = '-SNAPSHOT'
@@ -7,6 +7,21 @@ mainClassName = 'cz.kramolis.mega.runtime.Main'
 
 archivesBaseName = "${rootProject.name}-${name.replaceAll("\\p{Upper}") { "-${it.toLowerCase()}" }}"
 
+buildscript {
+    ext {
+        megaVersion = '-SNAPSHOT'
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath group: "com.github.shamoh.mega", name: "mega-gradle-plugin", version: megaVersion
+    }
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
@@ -14,22 +29,10 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-ext {
-    megaVersion = '-SNAPSHOT'
-}
-
 dependencies {
-    compile "com.github.shamoh.mega:mega-runtime:${megaVersion}"
+    compile group: "com.github.shamoh.mega", name: "mega-runtime", version: megaVersion
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.9'
+    gradleVersion = '2.10'
 }
-
-
-task copyResourcesToClasses(type: Copy) {
-    from 'build/resources/main'
-    into 'build/classes/main'
-}
-
-tasks.run.dependsOn tasks.copyResourcesToClasses

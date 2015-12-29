@@ -19,7 +19,7 @@ public class HttpStaticContentApp implements Context {
     private Logger logger;
 
     private void onEnvironmentAvailable(@Observes Environment environment, ProjectStage projectStage) {
-        logger.info("Current project stage: " + projectStage);
+        logger.info("Project stage: " + projectStage);
     }
 
     private void onHttpServerAvailable(@Observes BeforeHttpServerStart beforeHttpServerStart) {
