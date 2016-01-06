@@ -20,4 +20,3 @@ public class HelloWorldApp implements Context {
         environment.shutdown();
     }
 
-}
