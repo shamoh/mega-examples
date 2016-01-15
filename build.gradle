@@ -1,3 +1,18 @@
+allprojects {
+    apply plugin: 'jacoco'
+
+    plugins.withType(JavaPlugin) {
+
+        jacocoTestReport {
+            reports {
+                xml.enabled = true
+                html.enabled = true
+            }
+            executionData = fileTree(dir: 'build/jacoco', include: '**/*.exec')
+        }
+    }
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.10'
 }
