@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/shamoh/mega-examples.svg?branch=master)](https://travis-ci.org/shamoh/mega-examples)
+[![Code Coverage](http://codecov.io/github/shamoh/mega-examples/coverage.svg?branch=master)](http://codecov.io/github/shamoh/mega-examples?branch=master)
+[![JitPack Status](https://jitpack.io/v/shamoh/mega-examples.svg)](https://jitpack.io/#shamoh/mega-examples)
 
 Mega Examples
 =============
