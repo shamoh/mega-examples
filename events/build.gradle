@@ -1,0 +1,38 @@
+apply plugin: 'cz.kramolis.mega'
+
+group = 'com.github.shamoh.mega-examples'
+version = '-SNAPSHOT'
+
+mainClassName = 'cz.kramolis.mega.runtime.Main'
+
+archivesBaseName = "${rootProject.name}-${name.replaceAll("\\p{Upper}") { "-${it.toLowerCase()}" }}"
+
+buildscript {
+    ext {
+        megaVersion = '-SNAPSHOT'
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath group: "com.github.shamoh.mega", name: "mega-gradle-plugin", version: megaVersion
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile group: "com.github.shamoh.mega", name: "mega-runtime", version: megaVersion
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
+}
