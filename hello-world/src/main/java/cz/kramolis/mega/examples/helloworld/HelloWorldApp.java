@@ -1,10 +1,10 @@
 package cz.kramolis.mega.examples.helloworld;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.Observes;
-
 import cz.kramolis.mega.runtime.Context;
 import cz.kramolis.mega.runtime.Environment;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.event.Observes;
 
 @ApplicationScoped
 public class HelloWorldApp implements Context {

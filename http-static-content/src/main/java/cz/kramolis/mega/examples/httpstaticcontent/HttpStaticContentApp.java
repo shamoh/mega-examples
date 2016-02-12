@@ -1,5 +1,9 @@
 package cz.kramolis.mega.examples.httpstaticcontent;
 
+import cz.kramolis.mega.grizzly.BeforeHttpServerStart;
+import cz.kramolis.mega.runtime.Context;
+import cz.kramolis.mega.runtime.Environment;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -7,9 +11,6 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 
-import cz.kramolis.mega.grizzly.BeforeHttpServerStart;
-import cz.kramolis.mega.runtime.Context;
-import cz.kramolis.mega.runtime.Environment;
 import org.apache.deltaspike.core.api.projectstage.ProjectStage;
 
 @ApplicationScoped
